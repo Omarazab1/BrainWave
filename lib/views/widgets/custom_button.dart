@@ -6,13 +6,13 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 50,
-      width: double.infinity,
+      height: 55,
+      width: MediaQuery.sizeOf(context).width,
       decoration:BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         color: Colors.lightBlueAccent,
       ),
-      child: const Center(child:  Text('Add Note', style: TextStyle(color: Colors.white),)),
+      child: const Center(child:  Text('Add', style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),)),
     );
   }
 }

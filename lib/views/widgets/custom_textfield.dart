@@ -1,12 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:notesapp/constants.dart';
 
 class CustomTextField extends StatelessWidget {
   final String hintText;
   final int? maxLines;
-  final IconData prefixIcon;
-  const CustomTextField({super.key, required this.hintText,  this.maxLines = 1, required this.prefixIcon});
+  final IconData? prefixIcon;
+  const CustomTextField({super.key, required this.hintText,  this.maxLines = 1,  this.prefixIcon});
 
   @override
   Widget build(BuildContext context) {

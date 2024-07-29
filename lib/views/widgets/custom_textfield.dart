@@ -5,11 +5,18 @@ class CustomTextField extends StatelessWidget {
   final String hintText;
   final int? maxLines;
   final IconData? prefixIcon;
-  const CustomTextField({super.key, required this.hintText,  this.maxLines = 1,  this.prefixIcon});
-
+  const CustomTextField({super.key, required this.hintText,  this.maxLines = 1,  this.prefixIcon, this.onSaved});
+  final Function(String?)? onSaved;
   @override
   Widget build(BuildContext context) {
-    return  TextField(
+    return  TextFormField(
+      onSaved: onSaved,
+      validator: (value) {
+        if (value == null || value.isEmpty) {
+          return 'field is required';
+        }
+        return null;
+      },
       maxLines: maxLines,
       cursorColor: kPrimaryColor,
       decoration:  InputDecoration(

@@ -5,7 +5,8 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:notesapp/models/note_model.dart';
 import 'package:notesapp/utils/constants.dart';
 import 'package:notesapp/utils/simple_bloc_observer.dart';
-import 'package:notesapp/views/notes_view.dart';
+
+import 'package:notesapp/views/splash_view.dart';
 
 import 'cubits/notes_cubit/notes_cubit.dart';
 void main() async{
@@ -29,7 +30,8 @@ class NotesApp extends StatelessWidget {
           fontFamily: 'Poppins',
           brightness: Brightness.dark,
         ),
-        home: const NotesView(),
+        home:const SplashView(),
+        initialRoute: SplashView.routeName,
       ),
     );
   }

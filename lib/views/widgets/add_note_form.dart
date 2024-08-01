@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
 import 'package:notesapp/cubits/add_note_cubit/add_note_cubit.dart';
+import 'package:notesapp/views/widgets/colors_listview.dart';
 
 import '../../cubits/add_note_cubit/add_note_state.dart';
 import '../../models/note_model.dart';
@@ -48,6 +49,10 @@ class _AddNoteFormState extends State<AddNoteForm> {
               subtitle = value;
             },
           ),
+          const SizedBox(
+            height: 26,
+          ),
+          const ColorsListview(),
           const SizedBox(
             height: 26,
           ),

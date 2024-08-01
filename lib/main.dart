@@ -11,6 +11,7 @@ import 'package:notesapp/views/splash_view.dart';
 import 'cubits/notes_cubit/notes_cubit.dart';
 void main() async{
   await Hive.initFlutter();
+  Hive.isAdapterRegistered(0);
   Hive.registerAdapter(NoteModelAdapter());
   await Hive.openBox<NoteModel>(kNotesBox);
   Bloc.observer = SimpleBlocObserver();

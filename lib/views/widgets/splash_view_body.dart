@@ -16,7 +16,6 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     initSlidingAnimation();
     Future.delayed(const Duration(seconds: 5), () {
